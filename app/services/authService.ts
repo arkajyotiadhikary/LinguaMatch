@@ -20,3 +20,6 @@ export const registerUser = async (username: string, email: string, password: st
 }
 
 // find user by email
+export const findUserByEmail = async (email: string): Promise<IUser | null> => {
+  return User.findOne({ email });
+}
